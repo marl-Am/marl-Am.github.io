@@ -1,0 +1,272 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    background-color: Black;
+    color: white;
+}
+
+.section1 {
+    padding-top: 100px;
+}
+
+.section2 {
+    overflow: hidden;
+}
+
+.section3 {
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.fa-brands {
+    color: white;
+}
+
+.fa-brands:hover {
+    color: yellow;
+}
+
+.nav-menu {
+    border-bottom: 50px;
+    position: relative;
+    top: 80px;
+    left: 35%;
+    transform: translate(-30%, -50%);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.socials {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.social {
+    margin: 5px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: White;
+}
+
+.nav-link:hover {
+    color: yellow;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .columns {
+        flex-wrap: wrap;
+    }
+
+    .row {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: static;
+    }
+
+    .nav-menu {
+        /* make hamburger menu overlay other divs */
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        display: block;
+        z-index: 999;
+        /*  */
+
+        padding: 10px;
+        left: -75%;
+        top: 20rem;
+        flex-direction: column;
+        background-color: coral;
+
+        border-radius: 20px;
+        text-align: center;
+        transition: 0.2s;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position: fixed;
+        background-color: coral;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #beam:hover,
+    #momo:hover,
+    #asteroid-watch:hover,
+    #hiit-it:hover,
+    #tic-tac-toe:hover,
+    #rhea:hover {
+        color: black;
+    }
+
+}
+
+#about-me {
+    border-top: 5px;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.columns {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 15px;
+}
+
+.row {
+    width: 400px;
+    height: 100%;
+    box-shadow: white 0px 20px 0px 5px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.columns img {
+    float: center;
+    overflow: hidden;
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.viewcode-btn {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    align-items: center;
+}
+
+.viewcode-btn a {
+    color: black;
+}
+
+.viewcode-btn:hover a {
+    color: white;
+}
+
+.viewcode-btn:hover {
+    transform: translateY(-3px);
+    border-top: 5px solid coral;
+    background-color: black;
+    color: white;
+}
+
+#beam,
+#momo,
+#asteroid-watch,
+#hiit-it,
+#tic-tac-toe,
+#rhea {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+#beam:hover,
+#momo:hover,
+#asteroid-watch:hover,
+#hiit-it:hover,
+#tic-tac-toe:hover,
+#rhea:hover {
+    top: -10px;
+    color: black;
+}
+
+#beam:hover {
+    background-color: red;
+}
+
+#momo:hover {
+    background-color: cyan;
+}
+
+#asteroid-watch:hover {
+    background-color: #ff5f7e;
+}
+
+#rhea:hover {
+    background-color: purple;
+}
+
+#hiit-it:hover {
+    background-color: yellow;
+}
+
+#tic-tac-toe:hover {
+    background-color: green;
+}
