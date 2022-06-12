@@ -1,2 +1,2 @@
 # portfolio-website
- A website to demonstrate projects that is hosted on Github.
+ A website hosted on Github to demonstrate projects.
