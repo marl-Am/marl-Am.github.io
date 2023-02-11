@@ -1,284 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/src/images/favicon.ico" />
-    <script
-      src="https://kit.fontawesome.com/315493f7dc.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/src/style.css" />
-    <title>Portfolio</title>
-  </head>
-  <body class="bg-dark text-white">
-    <!-- Header -->
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
-        <!-- <h5 class="text-white h4">Portfolio</h5> -->
-        <ul id="my-links">
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#contact-me">Contact</a></li>
-          <li><a href="#projects">Projects</a></li>
-        </ul>
-        <span class="text-muted">Contact: MY email address.</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/src/images/favicon.ico" />
+  <script src="https://kit.fontawesome.com/315493f7dc.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <title>Portfolio</title>
+</head>
+
+<body class="bg-dark text-white">
+  <!-- Header -->
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <!-- <h5 class="text-white h4">Portfolio</h5> -->
+      <ul id="my-links">
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#contact-me">Contact</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <span class="text-muted">Contact: MY email address.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- About Me -->
+  <section class="mt-4 summary" id="about-me">
+    <h4>About Me</h4>
+    <p>
+      Hi there! My name is Marlon Amedee and I am a software engineer with
+      experience in Java, and Python.<br />I have a passion for using
+      technology to solve complex problems and am always looking for new
+      challenges to develop my skills.<br />My current interests are in Flask development and utilizing Spring Boot's
+      extensive library of tools and features, <br />including its auto-configuration capabilities, to
+      design and implement applications.
+    </p>
+  </section>
+  <!--  -->
+
+  <!-- Contact Me -->
+  <section class="mt-4" id="contact-me">
+    <div class="d-flex justify-content-center">
+      <a href="https://github.com/marl-Am" target="_blank" rel="noreferrer noopener" class="social">
+        <i class="fa-brands fa-github-square text-light fa-3x"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/marlon-a-89715814b/" target="_blank" rel="noreferrer noopener"
+        class="social">
+        <i class="fa-brands fa-linkedin text-light fa-3x"></i>
+      </a>
+      <a href="mailto:mamedee001@gmail.com" target="_blank" rel="noreferrer noopener" class="social">
+        <i class="fa-solid fa-envelope-square text-light fa-3x"></i>
+      </a>
+    </div>
+  </section>
+  <!--  -->
+
+  <!-- Projects -->
+  <section class="mt-4 text-white" id="projects">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <!-- <img
+              src="images/vintage.jpg"
+              class="card-img-top"
+              alt="images/vintage.jpg"
+            /> -->
+          <div class="card-body bg-dark">
+            <h5 class="card-title text-warning fw-bold">
+              <a href="http://mycity-env.eba-rypwjnfp.us-east-1.elasticbeanstalk.com/" target="_blank"
+                rel="noreferrer noopener" class="website-link">Mycity (Click For Website)</a>
+            </h5>
+            <p class="card-text">
+              Developed a cloud application rendered by React where a client
+              provides a name of a city and an HTTP GET request is sent to the
+              proper endpoints in the Spring backend. Spring retrieves the
+              data from the external APIs and sends it to the front-end.
+            </p>
+
+            <a href="https://github.com/marl-Am/my-city" target="_blank" rel="noreferrer noopener"
+              class="btn btn-outline-warning">View Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <!-- <img
+              src="images/vintage.jpg"
+              class="card-img-top"
+              alt="images/vintage.jpg"
+            /> -->
+          <div class="card-body bg-dark">
+            <h5 class="card-title text-warning fw-bold">
+              <a href="https://bugger.pythonanywhere.com/" target="_blank" rel="noreferrer noopener"
+                class="website-link">Bug Tracker (Click For Website)</a>
+            </h5>
+            <p class="card-text">
+              Developed a bug tracker web application using Bootstrap
+              to design the frontend and Flask as the
+              backend that allows users to create an account where they can
+              create/edit/delete projects and their tasks. The data is stored in a
+              MySQL database. Hosted with PythonAnywhere.
+            </p>
+            <a href="https://github.com/marl-Am/bug-reporter" target="_blank" rel="noreferrer noopener"
+              class="btn btn-outline-warning">View Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <!-- <img
+              src="images/vintage.jpg"
+              class="card-img-top"
+              alt="images/vintage.jpg"
+            /> -->
+          <div class="card-body bg-dark">
+            <h5 class="card-title text-warning fw-bold">
+              <a href="https://password-generator-681b7.web.app/" target="_blank" rel="noreferrer noopener"
+                class="website-link">
+                Password Generator (Click For Website)
+              </a>
+            </h5>
+            <p class="card-text">
+              Designed my own password generator Flask app hosted on the
+              cloud.
+            </p>
+            <a href="https://github.com/marl-Am/password-generator" target="_blank" rel="noreferrer noopener"
+              class="btn btn-outline-warning">View Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <!-- <img
+              src="images/vintage.jpg"
+              class="card-img-top"
+              alt="images/vintage.jpg"
+            /> -->
+          <div class="card-body bg-dark">
+            <h5 class="card-title text-warning fw-bold">Beam (Webscraper)</h5>
+            <p class="card-text">
+              A science news web scraper Flask app that displays information
+              from one article.
+            </p>
+            <a href="https://github.com/marl-Am/beam" target="_blank" rel="noreferrer noopener"
+              class="btn btn-outline-warning">View Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <!-- <img
+              src="images/vintage.jpg"
+              class="card-img-top"
+              alt="images/vintage.jpg"
+            /> -->
+          <div class="card-body bg-dark">
+            <h5 class="card-title text-warning fw-bold">Hiit It</h5>
+            <p class="card-text">
+              A Hiit timer used for cardio exercises hosted on the web.
+            </p>
+            <a href="https://github.com/marl-Am/hiit-it" target="_blank" rel="noreferrer noopener"
+              class="btn btn-outline-warning">View Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <!-- <img
+              src="images/vintage.jpg"
+              class="card-img-top"
+              alt="images/vintage.jpg"
+            /> -->
+          <div class="card-body bg-dark">
+            <h5 class="card-title text-warning fw-bold">Forager</h5>
+            <p class="card-text">
+              Using the Google Books API, we can search for a book on an
+              Android device.
+            </p>
+            <a href="https://github.com/marl-Am/Forager" target="_blank" rel="noreferrer noopener"
+              class="btn btn-outline-warning">View Code</a>
+          </div>
+        </div>
       </div>
     </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarToggleExternalContent"
-          aria-controls="navbarToggleExternalContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </nav>
+  </section>
 
-    <!-- About Me -->
-    <section class="mt-4 summary" id="about-me">
-      <h4>About Me</h4>
-      <p>
-        Hi there! My name is Marlon Amedee and I am a software engineer with
-        experience in Java, and Python.<br />I have a passion for using
-        technology to solve complex problems and am always looking for new
-        challenges to develop my skills.<br />My current interests are in Flask development and utilizing Spring Boot's extensive library of tools and features, <br />including its auto-configuration capabilities, to
-        design and implement applications.
-      </p>
-    </section>
-    <!--  -->
+  <!-- Back to top button -->
+  <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
 
-    <!-- Contact Me -->
-    <section class="mt-4" id="contact-me">
-      <div class="d-flex justify-content-center">
-        <a
-          href="https://github.com/marl-Am"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="social"
-        >
-          <i class="fa-brands fa-github-square text-light fa-3x"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/marlon-a-89715814b/"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="social"
-        >
-          <i class="fa-brands fa-linkedin text-light fa-3x"></i>
-        </a>
-        <a
-          href="mailto:mamedee001@gmail.com"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="social"
-        >
-          <i class="fa-solid fa-envelope-square text-light fa-3x"></i>
-        </a>
-      </div>
-    </section>
-    <!--  -->
+  <!-- Test data -->
 
-    <!-- Projects -->
-    <section class="mt-4 text-white" id="projects">
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-            <div class="card-body bg-dark">
-              <h5 class="card-title text-warning fw-bold">
-                <a
-                  href="http://mycity-env.eba-rypwjnfp.us-east-1.elasticbeanstalk.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >Mycity (See Website)</a
-                >
-              </h5>
-              <p class="card-text">
-                Developed a cloud application rendered by React where a client
-                provides a name of a city and an HTTP GET request is sent to the
-                proper endpoints in the Spring backend. Spring retrieves the
-                data from the external APIs and sends it to the front-end.
-              </p>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="/src/index.js"></script>
+</body>
 
-              <a
-                href="https://github.com/marl-Am/my-city"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="btn btn-outline-warning"
-                >View Code</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-            <div class="card-body bg-dark">
-              <h5 class="card-title text-warning fw-bold">
-                <a href="https://bugger.pythonanywhere.com/" target="_blank" rel="noreferrer noopener"
-                  >Bug Tracker (See Website)</a
-                >
-              </h5>
-              <p class="card-text">
-                Developed a bug tracker web application using Bootstrap
-                to design the frontend and Flask as the
-                backend that allows users to create an account where they can
-                create/edit/delete projects and their tasks. The data is stored in a
-                MySQL database. Hosted with PythonAnywhere.
-              </p>
-              <a
-                href="https://github.com/marl-Am/bug-reporter"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="btn btn-outline-warning"
-                >View Code</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-            <div class="card-body bg-dark">
-              <h5 class="card-title text-warning fw-bold">
-                <a
-                  href="https://password-generator-681b7.web.app/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Password Generator (See Website)
-                </a>
-              </h5>
-              <p class="card-text">
-                Designed my own password generator Flask app hosted on the
-                cloud.
-              </p>
-              <a
-                href="https://github.com/marl-Am/password-generator"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="btn btn-outline-warning"
-                >View Code</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-            <div class="card-body bg-dark">
-              <h5 class="card-title text-warning fw-bold">Beam (Webscraper)</h5>
-              <p class="card-text">
-                A science news web scraper Flask app that displays information
-                from one article.
-              </p>
-              <a
-                href="https://github.com/marl-Am/beam"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="btn btn-outline-warning"
-                >View Code</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-            <div class="card-body bg-dark">
-              <h5 class="card-title text-warning fw-bold">Hiit It</h5>
-              <p class="card-text">
-                A Hiit timer used for cardio exercises hosted on the web.
-              </p>
-              <a
-                href="https://github.com/marl-Am/hiit-it"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="btn btn-outline-warning"
-                >View Code</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-            <div class="card-body bg-dark">
-              <h5 class="card-title text-warning fw-bold">Forager</h5>
-              <p class="card-text">
-                Using the Google Books API, we can search for a book on an
-                Android device.
-              </p>
-              <a
-                href="https://github.com/marl-Am/Forager"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="btn btn-outline-warning"
-                >View Code</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Back to top button -->
-    <button
-      type="button"
-      class="btn btn-danger btn-floating btn-lg"
-      id="btn-back-to-top"
-    >
-      <i class="bi bi-arrow-up-circle-fill"></i>
-    </button>
-
-    <!-- Test data -->
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/src/index.js"></script>
-  </body>
 </html>
