@@ -99,3 +99,10 @@
   color: lightcoral;
   text-decoration: underline;
 }
+
+.tech {
+  align-items: center;
+  font-weight: 600;
+  border-radius: 2px;
+  margin: 2px;
+}
