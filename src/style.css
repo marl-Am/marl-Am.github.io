@@ -109,6 +109,7 @@
   height: auto;
   max-height: 100%;
   overflow: auto;
+  font-size: 12px;
 }
 
 .tech {
@@ -119,9 +120,10 @@
   padding: 4px 8px;
 }
 
-/* .expensive {
+.expensive {
   background-color: red;
-} */
+  font-size: 12px;
+}
 
 /* .expansive li {
   background-color: lightseagreen;
