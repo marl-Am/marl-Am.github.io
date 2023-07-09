@@ -1,3 +1,4 @@
+
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
@@ -136,4 +137,19 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+.bg-black-opacity-1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0/var(--tw-bg-opacity));
+}
+
+.bg-gray-900-opacity-1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39/var(--tw-bg-opacity));
+}
+
+.bg-yellow-opacity-1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 254/var(--tw-bg-opacity));
 }
