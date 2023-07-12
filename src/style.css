@@ -121,14 +121,10 @@
   padding: 4px 8px;
 }
 
-.expensive {
-  background-color: red;
+.updates {
+  /* background-color: yellow; */
   font-size: 12px;
 }
-
-/* .expansive li {
-  background-color: lightseagreen;
-} */
 
 h1,
 h2,
