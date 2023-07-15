@@ -149,3 +149,7 @@ h6 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 254/var(--tw-bg-opacity));
 }
+
+.line-through {
+  text-decoration: line-through;
+}
