@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/src/style.css" />
   <title>Portfolio</title>
 </head>
@@ -17,13 +22,14 @@
 <body class="bg-black-opacity-1 text-white">
   <!-- Header -->
   <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-black-opacity-1 p-4">
+    <div class="bg-black-opacity-1">
       <!-- <h5 class="text-white h4">Portfolio</h5> -->
       <ul id="my-links">
         <li><a href="#about-me">About Me</a></li>
         <!-- <li><a href="https://marlona3.wordpress.com/" target="_blank" rel="noreferrer noopener">Blog</a></li> -->
         <li><a href="#contact-me">Contact</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#current-project">Current Projects</a></li>
+        <li><a href="#projects">Complete Projects</a></li>
       </ul>
     </div>
   </div>
@@ -48,7 +54,7 @@
           <div class="firework"></div>
         </div>
       </div>
-      <p class="lh-base text-wrap text-center font-monospace m-1">
+      <p class="lh-base text-wrap text-center m-1">
         I'm a fullstack developer experienced in Java and Python. I love exploring various technologies and
         frameworks, always seeking opportunities to enhance my skills. Currently, I'm particularly interested in diving
         into the Spring Framework and its wide range of tools and features.
@@ -78,23 +84,21 @@
   <!--  -->
 
   <!-- Projects -->
-  <section class="mt-4 text-white" id="projects">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
 
-      <div class="col">
+  <!-- Current Project -->
+  <section class="mt-4 text-white mx-auto" id="current-project">
+    <h6 class="section-heading text-center">Currently Working On:</h6>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
         <div class="card h-100">
-          <!-- <img
-                                      src="images/vintage.jpg"
-                                      class="card-img-top"
-                                      alt="images/vintage.jpg"
-                                    /> -->
-          <div class="card-body bg-gray-900-opacity-1">
+
+          <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
             <h5 class="card-title text-warning fw-bold">
               <a href="https://scribbler-3nhy.vercel.app/" target="_blank" rel="noreferrer noopener"
                 class="website-link">E-commerce Website
                 (Still In Development: Click For Website)</a>
             </h5>
-            <p class="card-text">
+            <p class="card-text mb-auto">
               Driven by the desire to learn the web development stack called T3 (Next.js, TypeScript, Tailwind CSS,
               tRPC, Prisma), I
               created an ecommerce site stocked with my beloved items, including old games, textbooks, and novels.
@@ -103,12 +107,13 @@
               solo-developed platform
               utilizes Next.js, React, Prisma, Stripe, and Clerk to ensure a seamless shopping experience. With
               responsive design,
-              secure payments, and user management functionalities, the site is deployed on Vercel for scalability and
+              secure payments, and user management functionalities, the site is deployed on Vercel for scalability
+              and
               optimal
               performance.
               <br>
             <div class="container updates">
-              <h6>Upcoming Updates:</h6>
+              <h6 class="mt-1">Upcoming Updates:</h6>
               <ul>
                 <li class="line-through">Add better styling (Complete)</li>
                 <li class="line-through">Add items to Stripe (Complete)</li>
@@ -118,7 +123,8 @@
                 <li class="line-through">Display items by price in ascending order (Complete)</li>
                 <li class="line-through">Display items by price in descending order (Complete)</li>
                 <li class="line-through">Add pagination (Complete)</li>
-                <li class="line-through">A signed-in User with Clerk, username, email address, and Clerk ID are automatically saved to the database (Complete)</li>
+                <li class="line-through">A signed-in User with Clerk, username, email address, and Clerk ID are
+                  automatically saved to the database (Complete)</li>
                 <li>Link orders to signed-in account (In Progress)</li>
                 <li>View past orders (In Progress)</li>
               </ul>
@@ -141,261 +147,234 @@
             </ul>
 
           </div>
+
         </div>
       </div>
+    </div>
+    </div>
+    </div>
+  </section>
 
-      <div class="col">
-        <div class="card h-100">
-          <!-- <img
-                                      src="images/vintage.jpg"
-                                      class="card-img-top"
-                                      alt="images/vintage.jpg"
-                                    /> -->
-          <div class="card-body bg-gray-900-opacity-1">
-            <h5 class="card-title text-warning fw-bold">
-              <a href="https://recommend-artist.web.app/" target="_blank" rel="noreferrer noopener"
-                class="website-link">Music Recommendation Application
-                (Click For Website)</a>
-            </h5>
-            <p class="card-text">
-              A music recommendation app that uses a User's favorite artist to generate similar musicians. The
-              motivation behind this project was my personal experience of discovering a new band and wanting to find
-              more like them. React makes an api call to the Flask server that uses Spotipy and the Spotify Web API to
-              find recommended artists. Styled using HTML/CSS/JavaScript/Tailwind to render the frontend.
-              Deployed using Google Cloud's Cloud Run for the back-end and Firebase Hosting for the front-end.
-            </p>
+  <section class="mt-4 text-white" id="projects">
+    <h6 class="section-heading text-center">Completed</h6>
+    <div class="card-deck">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
 
-            <a href="https://github.com/marl-Am/MUSIC-RECOMMENDATION-DEV" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-warning">View Code</a>
-            <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-              <li class="tech text-white bg-success">Python</li>
-              <li class="tech text-white bg-info">Flask</li>
-              <li class="tech text-white bg-info">HTML</li>
-              <li class="tech text-white bg-info">Tailwind CSS</li>
-              <li class="tech text-white bg-info">JavaScript</li>
-              <li class="tech text-white bg-info">React</li>
-              <li class="tech text-white bg-info">Google Firebase</li>
-              <li class="tech text-white bg-info">Google Cloud Run</li>
-              <!-- <li class="tech text-white bg-info">Railway</li> -->
-              <li class="tech text-white bg-info">Spotify Web API</li>
-            </ul>
+        <div class="col">
+          <div class="card">
 
+            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
+              <h5 class="card-title text-warning fw-bold">
+                <a href="https://recommend-artist.web.app/" target="_blank" rel="noreferrer noopener"
+                  class="website-link">Music Recommendation Application
+                  (Click For Website)</a>
+              </h5>
+              <p class="card-text mb-auto">
+                A music recommendation app that uses a User's favorite artist to generate similar musicians. The
+                motivation behind this project was my personal experience of discovering a new band and wanting to find
+                more like them. React makes an api call to the Flask server that uses Spotipy and the Spotify Web API to
+                find recommended artists. Styled using HTML/CSS/JavaScript/Tailwind to render the frontend.
+                Deployed using Google Cloud's Cloud Run for the back-end and Firebase Hosting for the front-end.
+              </p>
+
+              <a href="https://github.com/marl-Am/MUSIC-RECOMMENDATION-DEV" target="_blank" rel="noreferrer noopener"
+                class="btn btn-outline-warning">View Code</a>
+              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
+                <li class="tech text-white bg-success">Python</li>
+                <li class="tech text-white bg-info">Flask</li>
+                <li class="tech text-white bg-info">HTML</li>
+                <li class="tech text-white bg-info">Tailwind CSS</li>
+                <li class="tech text-white bg-info">JavaScript</li>
+                <li class="tech text-white bg-info">React</li>
+                <li class="tech text-white bg-info">Google Firebase</li>
+                <li class="tech text-white bg-info">Google Cloud Run</li>
+                <!-- <li class="tech text-white bg-info">Railway</li> -->
+                <li class="tech text-white bg-info">Spotify Web API</li>
+              </ul>
+
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card h-100">
-          <!-- <img
-                          src="images/vintage.jpg"
-                          class="card-img-top"
-                          alt="images/vintage.jpg"
-                        /> -->
-          <div class="card-body bg-gray-900-opacity-1">
-            <h5 class="card-title text-warning fw-bold">Blog</h5>
-            <p class="card-text">
-              Created a portfolio website with a blog element using Java by utilizing the
-              Spring framework, Spring Security and Thymeleaf, to serve dynamic content.
-              User credentials and blog posts are stored in a MySQL database. Spring Security provides authentication
-              and authorization for users, ensuring s secure application.
-              <br>
-              <!-- <span class="expensive">The blog was initially hosted on Microsoft Azure, but it had to be taken down as the hosting costs were exorbitant.</span> -->
-            </p>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
+              <h5 class="card-title text-warning fw-bold">Blog</h5>
+              <p class="card-text mb-auto">
+                Created a portfolio website with a blog element using Java by utilizing the
+                Spring framework, Spring Security and Thymeleaf, to serve dynamic content.
+                User credentials and blog posts are stored in a MySQL database. Spring Security provides authentication
+                and authorization for users, ensuring s secure application.
+                <br>
+                <!-- <span class="expensive">The blog was initially hosted on Microsoft Azure, but it had to be taken down as the hosting costs were exorbitant.</span> -->
+              </p>
 
-            <a href="https://github.com/marl-Am/blog" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-warning">View Code</a>
-            <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-              <li class="tech text-white bg-danger">Java</li>
-              <li class="tech text-white bg-info">Spring</li>
-              <li class="tech text-white bg-info">Thymeleaf</li>
-              <li class="tech text-white bg-info">JavaScript</li>
-              <li class="tech text-white bg-info">MySQL</li>
-              <li class="tech text-white bg-info">HTML</li>
-              <li class="tech text-white bg-info">CSS</li>
-            </ul>
+              <a href="https://github.com/marl-Am/blog" target="_blank" rel="noreferrer noopener"
+                class="btn btn-outline-warning">View Code</a>
+              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
+                <li class="tech text-white bg-danger">Java</li>
+                <li class="tech text-white bg-info">Spring</li>
+                <li class="tech text-white bg-info">Thymeleaf</li>
+                <li class="tech text-white bg-info">JavaScript</li>
+                <li class="tech text-white bg-info">MySQL</li>
+                <li class="tech text-white bg-info">HTML</li>
+                <li class="tech text-white bg-info">CSS</li>
+              </ul>
 
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card h-100">
-          <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-          <div class="card-body bg-gray-900-opacity-1">
-            <h5 class="card-title text-warning fw-bold">
-              <a href="https://bugger.pythonanywhere.com/" target="_blank" rel="noreferrer noopener"
-                class="website-link">Bug Tracker (Click For Website)</a>
-            </h5>
-            <p class="card-text">
-              Developed a bug tracker web application using Bootstrap
-              to design the frontend and Flask as the
-              backend that allows users to create an account where they can
-              create/edit/delete projects and their tasks. The data is stored in a
-              MySQL database. Hosted with PythonAnywhere.
-            </p>
-            <a href="https://github.com/marl-Am/bug-reporter" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-warning">View Code</a>
-            <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-              <li class="tech text-white bg-success">Python</li>
-              <li class="tech text-white bg-info">Flask</li>
-              <li class="tech text-white bg-info">MySQL</li>
-              <li class="tech text-white bg-info">JavaScript</li>
-              <li class="tech text-white bg-info">HTML</li>
-              <li class="tech text-white bg-info">CSS</li>
-              <li class="tech text-white bg-info">PythonAnywhere</li>
-            </ul>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
+              <h5 class="card-title text-warning fw-bold">
+                <a href="https://bugger.pythonanywhere.com/" target="_blank" rel="noreferrer noopener"
+                  class="website-link">Bug Tracker (Click For Website)</a>
+              </h5>
+              <p class="card-text mb-auto">
+                Developed a bug tracker web application using Bootstrap
+                to design the frontend and Flask as the
+                backend that allows users to create an account where they can
+                create/edit/delete projects and their tasks. The data is stored in a
+                MySQL database. Hosted with PythonAnywhere.
+              </p>
+              <a href="https://github.com/marl-Am/bug-reporter" target="_blank" rel="noreferrer noopener"
+                class="btn btn-outline-warning">View Code</a>
+              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
+                <li class="tech text-white bg-success">Python</li>
+                <li class="tech text-white bg-info">Flask</li>
+                <li class="tech text-white bg-info">MySQL</li>
+                <li class="tech text-white bg-info">JavaScript</li>
+                <li class="tech text-white bg-info">HTML</li>
+                <li class="tech text-white bg-info">CSS</li>
+                <li class="tech text-white bg-info">PythonAnywhere</li>
+              </ul>
 
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card h-100">
-          <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-          <div class="card-body bg-gray-900-opacity-1">
-            <h5 class="card-title text-warning fw-bold">Mycity</h5>
-            <p class="card-text">
-              Developed a cloud application rendered by React where a client
-              provides a name of a city and an HTTP GET request is sent to the
-              proper endpoints in the Spring backend. Spring retrieves the
-              data from the external APIs and sends it to the front-end.
-              <br>
-              <!-- <span class="expensive">The app was initially hosted on Google Firebase, but it had to be taken down as the hosting costs were exorbitant.</span> -->
-            </p>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
+              <h5 class="card-title text-warning fw-bold">Mycity</h5>
+              <p class="card-text mb-auto">
+                Developed a cloud application rendered by React where a client
+                provides a name of a city and an HTTP GET request is sent to the
+                proper endpoints in the Spring backend. Spring retrieves the
+                data from the external APIs and sends it to the front-end.
+                <br>
+                <!-- <span class="expensive">The app was initially hosted on Google Firebase, but it had to be taken down as the hosting costs were exorbitant.</span> -->
+              </p>
 
-            <a href="https://github.com/marl-Am/my-city" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-warning">View Code</a>
+              <a href="https://github.com/marl-Am/my-city" target="_blank" rel="noreferrer noopener"
+                class="btn btn-outline-warning">View Code</a>
 
-            <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-              <li class="tech text-white bg-danger">Java</li>
-              <li class="tech text-white bg-info">React.js</li>
-              <li class="tech text-white bg-info">Spring</li>
-              <li class="tech text-white bg-info">HTML</li>
-              <li class="tech text-white bg-info">CSS</li>
-            </ul>
+              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
+                <li class="tech text-white bg-danger">Java</li>
+                <li class="tech text-white bg-info">React.js</li>
+                <li class="tech text-white bg-info">Spring</li>
+                <li class="tech text-white bg-info">HTML</li>
+                <li class="tech text-white bg-info">CSS</li>
+              </ul>
 
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col">
-        <div class="card h-100">
-          <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-          <div class="card-body bg-gray-900-opacity-1">
-            <h5 class="card-title text-warning fw-bold">
-              <a href="https://password-generator-681b7.web.app/" target="_blank" rel="noreferrer noopener"
-                class="website-link">
-                Password Generator (Click For Website)
-              </a>
-            </h5>
-            <p class="card-text">
-              Designed my own password generator Flask app hosted on the
-              cloud, with Google Firebase.
-            </p>
-            <a href="https://github.com/marl-Am/password-generator" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-warning">View Code</a>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
+              <h5 class="card-title text-warning fw-bold">
+                <a href="https://password-generator-681b7.web.app/" target="_blank" rel="noreferrer noopener"
+                  class="website-link">
+                  Password Generator (Click For Website)
+                </a>
+              </h5>
+              <p class="card-text mb-auto">
+                Designed my own password generator Flask app hosted on the
+                cloud, with Google Firebase.
+              </p>
+              <a href="https://github.com/marl-Am/password-generator" target="_blank" rel="noreferrer noopener"
+                class="btn btn-outline-warning">View Code</a>
 
-            <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-              <li class="tech text-white bg-success">Python</li>
-              <li class="tech text-white bg-info">Flask</li>
-              <li class="tech text-white bg-info">JavaScript</li>
-              <li class="tech text-white bg-info">HTML</li>
-              <li class="tech text-white bg-info">CSS</li>
-              <li class="tech text-white bg-info">Google Firebase</li>
-            </ul>
+              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
+                <li class="tech text-white bg-success">Python</li>
+                <li class="tech text-white bg-info">Flask</li>
+                <li class="tech text-white bg-info">JavaScript</li>
+                <li class="tech text-white bg-info">HTML</li>
+                <li class="tech text-white bg-info">CSS</li>
+                <li class="tech text-white bg-info">Google Firebase</li>
+              </ul>
 
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-          <div class="card-body bg-gray-900-opacity-1">
-            <h5 class="card-title text-warning fw-bold">Beam (Webscraper)</h5>
-            <p class="card-text">
-              A science news web scraper Flask app that displays information
-              from one article.
-            </p>
-            <a href="https://github.com/marl-Am/beam" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-warning">View Code</a>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
+              <h5 class="card-title text-warning fw-bold">Beam (Webscraper)</h5>
+              <p class="card-text mb-auto">
+                A science news web scraper Flask app that displays information
+                from one article.
+              </p>
+              <a href="https://github.com/marl-Am/beam" target="_blank" rel="noreferrer noopener"
+                class="btn btn-outline-warning">View Code</a>
 
-            <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-              <li class="tech text-white bg-success">Python</li>
-              <li class="tech text-white bg-info">Flask</li>
-              <li class="tech text-white bg-info">JavaScript</li>
-              <li class="tech text-white bg-info">HTML</li>
-              <li class="tech text-white bg-info">CSS</li>
-            </ul>
+              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
+                <li class="tech text-white bg-success">Python</li>
+                <li class="tech text-white bg-info">Flask</li>
+                <li class="tech text-white bg-info">JavaScript</li>
+                <li class="tech text-white bg-info">HTML</li>
+                <li class="tech text-white bg-info">CSS</li>
+              </ul>
 
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-          <div class="card-body bg-gray-900-opacity-1">
-            <h5 class="card-title text-warning fw-bold">Hiit It</h5>
-            <p class="card-text">
-              A Hiit timer used for cardio exercises designed for the web.
-            </p>
-            <a href="https://github.com/marl-Am/hiit-it" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-warning">View Code</a>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
+              <h5 class="card-title text-warning fw-bold">Hiit It</h5>
+              <p class="card-text mb-auto">
+                A Hiit timer used for cardio exercises designed for the web.
+              </p>
+              <a href="https://github.com/marl-Am/hiit-it" target="_blank" rel="noreferrer noopener"
+                class="btn btn-outline-warning">View Code</a>
 
-            <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-              <li class="tech text-white bg-info">JavaScript</li>
-              <li class="tech text-white bg-info">HTML</li>
-              <li class="tech text-white bg-info">CSS</li>
-            </ul>
+              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
+                <li class="tech text-white bg-info">JavaScript</li>
+                <li class="tech text-white bg-info">HTML</li>
+                <li class="tech text-white bg-info">CSS</li>
+              </ul>
 
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <!-- <img
-              src="images/vintage.jpg"
-              class="card-img-top"
-              alt="images/vintage.jpg"
-            /> -->
-          <div class="card-body bg-gray-900-opacity-1">
-            <h5 class="card-title text-warning fw-bold">Forager</h5>
-            <p class="card-text">
-              Using the Google Books API, we can search for a book on an
-              Android device.
-            </p>
-            <a href="https://github.com/marl-Am/Forager" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-warning">View Code</a>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
+              <h5 class="card-title text-warning fw-bold">Forager</h5>
+              <p class="card-text mb-auto">
+                Using the Google Books API, we can search for a book on an
+                Android device.
+              </p>
+              <a href="https://github.com/marl-Am/Forager" target="_blank" rel="noreferrer noopener"
+                class="btn btn-outline-warning">View Code</a>
 
-            <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-              <li class="tech text-white bg-danger">Java</li>
-              <li class="tech text-white bg-info">Android Studio</li>
-              <li class="tech text-white bg-info">Google Books API</li>
-            </ul>
+              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
+                <li class="tech text-white bg-danger">Java</li>
+                <li class="tech text-white bg-info">Android Studio</li>
+                <li class="tech text-white bg-info">Google Books API</li>
+              </ul>
 
+            </div>
           </div>
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- Back to top button -->

@@ -1,3 +1,8 @@
+body {
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
 
 #btn-back-to-top {
   position: fixed;
@@ -132,7 +137,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-wrap: balance;
+  word-wrap: balance;
 }
 
 .bg-black-opacity-1 {
