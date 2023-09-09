@@ -164,13 +164,30 @@ ul.portfolio-tags {
   text-align: center;
 }
 
+/* Add margin and width to the skill tags to create space and control their size */
 li.portfolio-tag {
+  margin-right: 10px;
+  /* Adjust the value as needed */
+  /* Your existing styles remain unchanged */
   list-style-type: none;
   font-size: 9px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #40E0D0;
-  display: inline;
+  display: inline-block;
+  /* Use inline-block to control width */
   border: 2px solid #40E0D0;
   padding: 8px;
+  width: auto;
+  /* You can adjust the width as needed */
+}
+
+/* Apply the style only on screens with a maximum width of 768px (mobile screens) */
+@media (max-width: 768px) {
+  li.portfolio-tag {
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* Adjust the value for smaller screens */
+  }
 }
