@@ -159,38 +159,29 @@ h6 {
   text-decoration: line-through;
 }
 
-ul.portfolio-tags {
+/* ul.portfolio-tags {
   padding: 10px 0 10px 0;
   text-align: center;
-}
+} */
 
 /* Add margin and width to the skill tags to create space and control their size */
 li.portfolio-tag {
-  margin-right: 10px;
-  /* Adjust the value as needed */
-  /* Your existing styles remain unchanged */
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
   list-style-type: none;
   font-size: 9px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #40E0D0;
   display: inline-block;
-  /* Use inline-block to control width */
+
   border: 2px solid #40E0D0;
   padding: 8px;
   width: auto;
-  /* You can adjust the width as needed */
 }
 
-/* Apply the style only on screens with a maximum width of 768px (mobile screens) */
-@media (max-width: 768px) {
-  li.portfolio-tag {
-    margin-right: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    /* Adjust the value for smaller screens */
-  }
-}
 
 
 
@@ -251,6 +242,17 @@ li.portfolio-tag {
   text-decoration: underline;
 }
 
+#about-me .btn-bar a:hover {
+  text-decoration: underline;
+}
+
+#about-me .btn-bar a {
+  min-width: 150px;
+  text-align: center;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
 .about-list {
   padding-top: 2px;
 }
@@ -290,14 +292,13 @@ li.portfolio-tag {
   font-size: 15px;
 }
 
-.about-img {
+/* .about-img {
   box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.06);
   padding: 10px;
-  /* background: #ffffff; */
-}
+} */
 
 @media (max-width: 991px) {
-  .about-img {
+  .img-container {
     /* margin-top: 30px; */
     display: none;
   }
@@ -370,11 +371,7 @@ li.portfolio-tag {
 
 /* About me fireworks */
 .fire-container {
-  /* background:
-    linear-gradient(#0007, #0000),
-    #123; */
   margin: 0;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -531,14 +528,4 @@ li.portfolio-tag {
   left: 70%;
   top: 60%;
   animation-delay: -0.4s;
-}
-
-/* Image container */
-.image-container {
-  width: 315px;
-  height: 315px;
-  background-image: url('../src/images/team.png');
-  background-size: cover;
-  background-position: center;
-  /* Adjust this value to focus on the desired area */
 }
