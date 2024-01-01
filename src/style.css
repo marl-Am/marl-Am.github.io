@@ -32,7 +32,7 @@ body {
 }
 
 .social {
-  margin: 5px;
+  margin: 2px;
 }
 
 .summary {
@@ -613,4 +613,30 @@ li.portfolio-tag {
   62% {
     transform: translate(-22px, 5px) skew(21deg);
   }
+}
+
+/* Styles for smaller screens (less than 600px) */
+.magic-span {
+  display: inline;
+  /* Show the magic element */
+}
+
+/* Media query for larger screens (600px and above) */
+@media screen and (min-width: 768px) {
+  .magic-span {
+    display: none;
+    /* Hide the magic element */
+  }
+}
+
+
+/*  */
+.contact-container {
+  background-color: inherit;
+  padding-top: 25px;
+}
+
+
+footer ul.nav li.nav-item:hover a {
+  color: coral !important;
 }
