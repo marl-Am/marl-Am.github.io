@@ -1,623 +1,568 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marlon Amedee — Software Developer</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/src/images/favicon.ico" />
-  <script src="https://kit.fontawesome.com/315493f7dc.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@300;400;500;600;700;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/src/style.css" />
-  <title>Portfolio</title>
-</head>
+    <link rel="icon" type="image/png" href="/src/images/favicon.png">
 
-<body class="bg-black-opacity-1 text-white">
-  <!-- Header -->
-  <!-- <div class="container mt-2"> -->
-  <nav class="navbar navbar-expand-lg" aria-label="Twelfth navbar example" style="background-color: black;"
-    data-bs-theme="dark">
-    <div class="container-fluid">
-      <button class="navbar-toggler collapsed bg-white" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <link rel="stylesheet" href="/src/style.css">
 
-      <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample10">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about-me">About</a>
-          </li>
-          <!-- <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact-me">Contact</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="https://marlona3.wordpress.com/" target="_blank" rel="noreferrer noopener">Essays</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://marloname001.wixsite.com/poetry-haven" target="_blank" rel="noreferrer noopener">Poetry</a>
-          </li> -->
-          <span class="magic-span">
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-              <li class="ms-3">
-                <a href="https://github.com/marl-Am" target="_blank" rel="noreferrer noopener" class="social">
-                  <i class="fa-brands fa-github-square text-light fa-2x"></i>
-                </a>
-              </li>
+    <meta
+      name="description"
+      content="Full-stack developer. Independent builds across Python, Java, Rust, and TypeScript." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #e5e3d9;
+        --panel: #ffffff;
+        --ink: #1b1f23;
+        --ink-muted: #5c6570;
+        --line: #d7dbd3;
+        --live: #3f7d5c;
+        --live-bg: #e7efe9;
+        --dev: #a6752c;
+        --dev-bg: #f3e9d9;
+        --link: #33516b;
+        --sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+        --mono: 'IBM Plex Mono', 'Consolas', monospace;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+      }
+      a:hover {
+        opacity: 0.75;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--link);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+      .wrap {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
 
-              <li class="ms-3">
-                <a href="https://www.linkedin.com/in/marlon-a-89715814b/" target="_blank" rel="noreferrer noopener"
-                  class="social">
-                  <i class="fa-brands fa-linkedin text-light fa-2x"></i>
-                </a>
-              </li>
+      .eyebrow {
+        font-family: var(--mono);
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        margin: 0 0 10px;
+      }
 
-              <li class="ms-3">
-                <a href="mailto:mamedee001@gmail.com" target="_blank" rel="noreferrer noopener" class="social">
-                  <i class="fa-solid fa-envelope-square text-light fa-2x"></i>
-                </a>
-              </li>
-            </ul>
-          </span>
-        </ul>
-      </div>
+      header.hero {
+        margin-bottom: 56px;
+      }
+      h1 {
+        font-size: clamp(28px, 5vw, 38px);
+        font-weight: 700;
+        margin: 0 0 6px;
+        letter-spacing: -0.01em;
+      }
+      .status-line {
+        font-family: var(--mono);
+        font-size: 14px;
+        color: var(--ink-muted);
+        margin: 0 0 20px;
+      }
+      .status-line .dot {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--dev);
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+      .tagline {
+        font-size: 17px;
+        max-width: 560px;
+        margin: 0 0 22px;
+      }
+      .contact-row a {
+        margin-right: 18px;
+        font-family: var(--mono);
+        font-size: 14px;
+      }
 
-    </div>
-  </nav>
-  <!-- </div> -->
+      section {
+        margin-bottom: 52px;
+      }
+      section > p {
+        font-size: 15.5px;
+        color: var(--ink);
+        max-width: 600px;
+      }
 
+      .rule {
+        border: none;
+        border-top: 1px solid var(--line);
+        margin: 0 0 52px;
+      }
 
+      /* Build log */
+      .log {
+        position: relative;
+        padding-left: 26px;
+        border-left: 2px solid var(--line);
+      }
+      .log-entry {
+        position: relative;
+        padding-bottom: 40px;
+      }
+      .log-entry:last-child {
+        padding-bottom: 0;
+      }
+      .log-entry__dot {
+        position: absolute;
+        left: -33px;
+        top: 6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--panel);
+        border: 2px solid var(--live);
+      }
+      .log-entry--dev .log-entry__dot {
+        border-color: var(--dev);
+      }
 
-  <!-- About Me -->
-  <main id="about-me">
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-      <div class="col-lg-6 mx-auto">
+      .log-entry__meta {
+        font-family: var(--mono);
+        font-size: 12.5px;
+        color: var(--ink-muted);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 6px;
+        flex-wrap: wrap;
+      }
+      .status-tag {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border-radius: 3px;
+        background: var(--live-bg);
+        color: var(--live);
+      }
+      .log-entry--dev .status-tag {
+        background: var(--dev-bg);
+        color: var(--dev);
+      }
 
-        <h4 class="dark-color">Do some awesome stuff with me.</h4>
+      .log-entry h3 {
+        font-size: 19px;
+        margin: 0 0 8px;
+        font-weight: 600;
+      }
+      .log-entry p {
+        font-size: 15px;
+        color: var(--ink);
+        margin: 0 0 12px;
+        max-width: 560px;
+      }
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+      .tech-tags span {
+        font-family: var(--mono);
+        font-size: 11.5px;
+        color: var(--ink-muted);
+        border: 1px solid var(--line);
+        border-radius: 3px;
+        padding: 2px 7px;
+        background: var(--panel);
+      }
+      .log-entry__links a {
+        font-size: 13.5px;
+        margin-right: 16px;
+      }
 
+      /* Skills manifest */
+      .manifest {
+        font-family: var(--mono);
+        font-size: 14px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 22px 26px;
+      }
+      .manifest-row {
+        display: flex;
+        gap: 14px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .manifest-row:last-child {
+        border-bottom: none;
+      }
+      .manifest-key {
+        color: var(--ink-muted);
+        min-width: 96px;
+        flex-shrink: 0;
+      }
+      .manifest-val {
+        color: var(--ink);
+      }
 
-        <p class="lead mb-4">Hello, I'm <span class="name"> <span title="Marlon">Marlon,</span> </span>
-          specializing in <span class="theme-color">web development</span>.
-          My focus is on weaving together visually appealing
-          and <span class="theme-color">user-friendly applications</span>, always accompanied by the elegance of
-          <span class="theme-color">clean and efficient code</span>.
+      /* Background */
+      .bg-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 15px;
+      }
+      .bg-row:last-child {
+        border-bottom: none;
+      }
+      .bg-row .place {
+        font-weight: 600;
+      }
+      .bg-row .when {
+        font-family: var(--mono);
+        font-size: 13px;
+        color: var(--ink-muted);
+        white-space: nowrap;
+      }
+
+      footer {
+        font-family: var(--mono);
+        font-size: 13px;
+        color: var(--ink-muted);
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+      }
+
+      @media (max-width: 560px) {
+        .wrap {
+          padding: 44px 18px 72px;
+        }
+        .log {
+          padding-left: 20px;
+        }
+        .log-entry__dot {
+          left: -27px;
+        }
+        .bg-row {
+          flex-direction: column;
+          gap: 2px;
+        }
+      }
+
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(8px);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease;
+      }
+      [data-reveal].is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        [data-reveal] {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <p class="eyebrow">Software Developer</p>
+        <h1>Marlon Amedee</h1>
+        <p class="status-line">
+          <span class="dot" aria-hidden="true"></span>currently studying:
+          Salesforce Administrator Certification
         </p>
+        <p class="tagline">
+          I build and deploy full-stack software on my own, across Python, Java,
+          Rust, and TypeScript. No single stack, just whatever the problem calls
+          for.
+        </p>
+        <p class="contact-row">
+          <a href="mailto:mamedee001@gmail.com">mamedee001@gmail.com</a>
+          <a target="_blank" rel="noopener" href="https://github.com/marl-Am"
+            >github.com/marl-Am</a
+          >
+        </p>
+      </header>
 
+      <section id="about" data-reveal>
+        <p class="eyebrow">About</p>
+        <p>
+          I graduated with a CS degree in 2021, then spent the years after
+          teaching myself to ship production software instead of following a
+          single tutorial track. I've built across Python, Java, Rust, and
+          TypeScript, most recently focusing on secure, multi-tenant application
+          design. I also ran an independent e-commerce operation for over a
+          year, handling sourcing, pricing, and fulfillment on my own.
+        </p>
+      </section>
 
-        <div class="mt-4" id="skills">
-          <h6 class="section-heading text-center">Skills</h6>
-          <div class="caption portfolio-details">
-            <ul class="portfolio-tags gap-2">
-              <li class="portfolio-tag">Java</li>
-              <li class="portfolio-tag">Python</li>
-              <li class="portfolio-tag">Spring Boot</li>
-              <li class="portfolio-tag">TypeScript</li>
-              <li class="portfolio-tag">React</li>
-              <li class="portfolio-tag">HTML</li>
-              <li class="portfolio-tag">CSS</li>
-              <li class="portfolio-tag">Git</li>
-              <li class="portfolio-tag">MySQL</li>
-              <li class="portfolio-tag">Flask</li>
-              <li class="portfolio-tag">Node</li>
-              <li class="portfolio-tag">Tailwind</li>
-              <li class="portfolio-tag">Bootstrap</li>
-              <li class="portfolio-tag">OOP</li>
-              <li class="portfolio-tag">Full-Stack</li>
-              <li class="portfolio-tag">Web Content Management System</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <hr class="rule" />
 
-      <!-- <div class="fire-container">
-        <div class="firework"></div>
-        <div class="firework"></div>
-        <div class="firework"></div>
-      </div> -->
+      <section id="log">
+        <p class="eyebrow">Build Log</p>
+        <div class="log">
+          <article class="log-entry log-entry--dev" data-reveal>
+            <span class="log-entry__dot" aria-hidden="true"></span>
+            <div class="log-entry__meta">
+              <span>Dec 2025 → present</span>
+              <span class="status-tag">In development</span>
+            </div>
+            <h3>Email Signature Management Platform</h3>
+            <p>
+              A multi-tenant SaaS tool for managing email signatures across a
+              team. The authentication layer runs on Argon2id password hashing
+              with account lockout, and every tenant's data is isolated in
+              PostgreSQL by design, not by convention. Server-rendered with
+              Jinja2 and Alpine.js, containerized with Docker, deployed through
+              a continuous pipeline on Render.
+            </p>
+            <div class="tech-tags">
+              <span>Python</span><span>Flask</span><span>PostgreSQL</span
+              ><span>Docker</span><span>Argon2id</span>
+            </div>
+            <div class="log-entry__links">
+              <a target="_blank" rel="noopener" href="https://github.com/marl-Am/signature"
+                >GitHub →</a
+              >
+            </div>
+          </article>
 
-      <!-- <div class="overflow-hidden img-container" style="max-height: 60vh;">
-        <div class="container px-5">
-          <img src="/src/images/ex.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
-            width="700" height="250" loading="lazy">
-        </div>
-      </div> -->
+          <article class="log-entry" data-reveal>
+            <span class="log-entry__dot" aria-hidden="true"></span>
+            <div class="log-entry__meta">
+              <span>June 2026</span>
+              <span class="status-tag">Shipped</span>
+            </div>
+            <h3>Anki Clone</h3>
+            <p>
+              A native desktop flashcard app implementing spaced-repetition
+              scheduling, the same technique I use to study for certifications.
+              Built with Tauri and Rust on the backend specifically to compare
+              native runtime performance against a browser-based deployment,
+              with React and TypeScript on the frontend.
+            </p>
+            <div class="tech-tags">
+              <span>Rust</span><span>Tauri</span><span>TypeScript</span
+              ><span>React</span>
+            </div>
+            <div class="log-entry__links">
+              <a target="_blank" rel="noopener" href="https://github.com/marl-Am/flashcard-app"
+                >GitHub →</a
+              >
+            </div>
+          </article>
 
-    </div>
-  </main>
+          <article class="log-entry" data-reveal>
+            <span class="log-entry__dot" aria-hidden="true"></span>
+            <div class="log-entry__meta">
+              <span>2025</span>
+              <span class="status-tag">Live</span>
+            </div>
+            <h3>Expense Tracker</h3>
+            <p>
+              A full-stack personal finance app on Flask and SQLAlchemy.
+              Charting is deliberately layered: Chart.js for standard analytics,
+              D3.js for the custom visualizations Chart.js couldn't express. PDF
+              report export gives the data a life outside the browser.
+            </p>
+            <div class="tech-tags">
+              <span>Python</span><span>Flask</span><span>SQLAlchemy</span
+              ><span>Chart.js</span><span>D3.js</span>
+            </div>
+            <div class="log-entry__links">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://personal-finance-analytics.onrender.com/"
+                >Live →</a
+              >
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/marl-Am/personal-finance-analytics"
+                >GitHub →</a
+              >
+            </div>
+          </article>
 
+          <article class="log-entry" data-reveal>
+            <span class="log-entry__dot" aria-hidden="true"></span>
+            <div class="log-entry__meta">
+              <span>2023</span>
+              <span class="status-tag">Live</span>
+            </div>
+            <h3>Tracker</h3>
+            <p>
+              A full-stack project tracker on Flask and MySQL. An earlier,
+              smaller build, and it has stayed live and reachable since the day
+              I deployed it.
+            </p>
+            <div class="tech-tags">
+              <span>Python</span><span>Flask</span><span>MySQL</span>
+            </div>
+            <div class="log-entry__links">
+              <a target="_blank" rel="noopener" href="https://bugger.pythonanywhere.com/"
+                >Live →</a
+              >
+              <a target="_blank" rel="noopener" href="https://github.com/marl-Am/bug-reporter"
+                >GitHub →</a
+              >
+            </div>
+          </article>
 
-  <!-- Projects -->
-  <section class="mt-4 text-white" id="projects">
-    <h6 class="section-heading text-center">Projects</h6>
-    <div class="card-deck">
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-
-        <!--  -->
-        <!-- <div class="col-12 col-md-8 col-md-12">
-                  <div class="card h-100">
-                    <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-                      <h5 class="card-title text-warning fw-bold">
-                        <a href="https://scribbler-3nhy.vercel.app/" target="_blank" rel="noreferrer noopener"
-                          class="website-link">AI
-                          (Click For Website)</a>
-                      </h5>
-                      <p class="card-text mb-auto">
-                        Driven by the desire to learn the web development stack called T3 (Next.js, TypeScript, Tailwind CSS,
-                        tRPC, Prisma), I
-                        created an ecommerce site stocked with my beloved items, including old games, textbooks, and novels.
-                        Instead of letting
-                        them go to waste, I wanted to provide them with a new home where they would be appreciated. This
-                        solo-developed platform
-                        utilizes Next.js, React, Prisma, Stripe, and Clerk to ensure a seamless shopping experience. With
-                        responsive design,
-                        secure payments, and user management functionalities, the site is deployed on Vercel for scalability
-                        and
-                        optimal
-                        performance.
-                        <br>
-                      </p>
-                
-                      <a href="https://github.com/marl-Am/scribbler" target="_blank" rel="noreferrer noopener"
-                        class="btn btn-outline-warning">View Code</a>
-                      <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                        <li class="tech border text-white bg-gray-900-opacity-1">Next.js</li>
-                        <li class="tech text-white bg-info">React</li>
-                        <li class="tech text-white bg-info">Prisma</li>
-                        <li class="tech text-white bg-info">Planetscale</li>
-                      </ul>
-                
-                    </div>
-                
-                  </div>
-                </div> -->
-        <!--  -->
-
-        <!--  -->
-        <!-- <div class="col-12 col-md-8 col-md-12">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">
-                <a href="https://scribbler-3nhy.vercel.app/" target="_blank" rel="noreferrer noopener"
-                  class="website-link">Video Clone
-                  (Click For Website)</a>
-              </h5>
-              <p class="card-text mb-auto">
-                Driven by the desire to learn the web development stack called T3 (Next.js, TypeScript, Tailwind CSS,
-                tRPC, Prisma), I
-                created an ecommerce site stocked with my beloved items, including old games, textbooks, and novels.
-                Instead of letting
-                them go to waste, I wanted to provide them with a new home where they would be appreciated. This
-                solo-developed platform
-                utilizes Next.js, React, Prisma, Stripe, and Clerk to ensure a seamless shopping experience. With
-                responsive design,
-                secure payments, and user management functionalities, the site is deployed on Vercel for scalability
-                and
-                optimal
-                performance.
-                <br>
-              </p>
-
-              <a href="https://github.com/marl-Am/scribbler" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech border text-white bg-gray-900-opacity-1">Next.js</li>
-                <li class="tech text-white bg-info">React</li>
-                <li class="tech text-white bg-info">Planetscale</li>
-                <li class="tech text-white bg-info">Prisma</li>
-                <li class="tech text-white bg-info">TypeScript</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">CSS</li>
-                <li class="tech text-white bg-info">JavaScript</li>
-                <li class="tech text-white bg-info">Tailwind CSS</li>
-                <li class="tech text-white bg-info">PostGres</li>
-                <li class="tech text-white bg-info">Vercel</li>
-              </ul>
-
+          <article class="log-entry" data-reveal>
+            <span class="log-entry__dot" aria-hidden="true"></span>
+            <div class="log-entry__meta">
+              <span>2023</span>
+              <span class="status-tag">Shipped</span>
+            </div>
+            <h3>Blog Platform</h3>
+            <p>
+              A blogging platform in Java and Spring Boot, with account
+              creation, Spring Data JPA for the data layer, and Spring Security
+              handling authentication. Originally deployed on Azure, it came
+              down when the free credits ran out. I later redeployed it on
+              Render with a Supabase PostgreSQL database, so it's live again.
+            </p>
+            <div class="tech-tags">
+              <span>Java</span><span>Spring Boot</span
+              ><span>Spring Security</span><span>PostgreSQL</span
+              ><span>Render</span><span>Supabase</span>
             </div>
 
-          </div>
-        </div> -->
-        <!--  -->
-
-        <div class="col-12 col-md-8 col-md-12">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">
-                <p>E-commerce Website</p>
-              </h5>
-              <p class="card-text mb-auto">
-                Driven by the desire to learn the web development stack called T3 (Next.js, TypeScript, Tailwind CSS,
-                tRPC, Prisma), I
-                created an ecommerce site stocked with my beloved items, including old games, textbooks, and novels.
-                Instead of letting
-                them go to waste, I wanted to provide them with a new home where they would be appreciated. This
-                solo-developed platform
-                utilizes Next.js, React, Prisma, Stripe, and Clerk to ensure a seamless shopping experience. With
-                responsive design,
-                secure payments, and user management functionalities, the site is deployed on Vercel for scalability
-                and
-                optimal
-                performance.
-                <br>
-              <div class="container updates">
-                <h6 class="mt-1">Upcoming Updates:</h6>
-                <ul>
-                  <li class="line-through">Add better styling (Complete)</li>
-                  <li class="line-through">Add items to Stripe (Complete)</li>
-                  <li class="line-through">Checkout functionality: Stripe Integration (Complete)</li>
-                  <li class="line-through">Categories for items (Complete)</li>
-                  <li class="line-through">Display items by category functionality (Complete)</li>
-                  <li class="line-through">Display items by price in ascending order (Complete)</li>
-                  <li class="line-through">Display items by price in descending order (Complete)</li>
-                  <li class="line-through">Add pagination (Complete)</li>
-                  <li class="line-through">A signed-in User with Clerk, username, email address, and Clerk ID are
-                    automatically
-                    saved to the database (Complete)</li>
-                  <li class="line-through">Link orders to signed-in account (In Progress)</li>
-                  <li class="line-through">View past orders (In Progress)</li>
-                </ul>
-              </div>
-              </p>
-
-              <a href="https://github.com/marl-Am/scribbler" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech border text-white bg-gray-900-opacity-1">Next.js</li>
-                <li class="tech text-white bg-info">React</li>
-                <li class="tech text-white bg-info">TypeScript</li>
-                <li class="tech text-white bg-info">Prisma</li>
-                <li class="tech text-white bg-info">Planetscale</li>
-                <li class="tech text-white bg-info">Stripe</li>
-                <li class="tech text-white bg-info">Clerk</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">CSS</li>
-                <li class="tech text-white bg-info">JavaScript</li>
-                <li class="tech text-white bg-info">Tailwind CSS</li>
-                <li class="tech text-white bg-info">Vercel</li>
-              </ul>
-
+            <div class="log-entry__links">
+              <a target="_blank" rel="noopener" href="https://blog-complete-wogw.onrender.com/"
+                >Live →</a
+              >
+              <a target="_blank" rel="noopener" href="https://github.com/marl-Am/blog"
+                >GitHub →</a
+              >
             </div>
+          </article>
+        </div>
+      </section>
 
+      <hr class="rule" />
+
+      <section id="skills" data-reveal>
+        <p class="eyebrow">Skills</p>
+        <div class="manifest">
+          <div class="manifest-row">
+            <span class="manifest-key">languages</span
+            ><span class="manifest-val"
+              >Python, Java, JavaScript, TypeScript, SQL</span
+            >
+          </div>
+          <div class="manifest-row">
+            <span class="manifest-key">frameworks</span
+            ><span class="manifest-val"
+              >Flask, Spring Boot, React, Next.js</span
+            >
+          </div>
+          <div class="manifest-row">
+            <span class="manifest-key">databases</span
+            ><span class="manifest-val">PostgreSQL, MySQL, SQLite</span>
+          </div>
+          <div class="manifest-row">
+            <span class="manifest-key">security</span
+            ><span class="manifest-val"
+              >OWASP-aligned auth design, Argon2id, tenant isolation</span
+            >
+          </div>
+          <div class="manifest-row">
+            <span class="manifest-key">currently</span
+            ><span class="manifest-val"
+              >Salesforce Administrator Certification (in progress)</span
+            >
           </div>
         </div>
+      </section>
 
-        <div class="col">
-          <div class="card">
-
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">
-                <a href="https://recommend-artist.web.app/" target="_blank" rel="noreferrer noopener"
-                  class="website-link">Music Recommendation Application
-                  (Click For Website)</a>
-              </h5>
-              <p class="card-text mb-auto">
-                A music recommendation app that uses a User's favorite artist to generate similar musicians. The
-                motivation behind this project was my personal experience of discovering a new band and wanting to find
-                more like them. React makes an api call to the Flask server that uses Spotipy and the Spotify Web API to
-                find recommended artists. Styled using HTML/CSS/JavaScript/Tailwind to render the frontend.
-                Deployed using Google Cloud's Cloud Run for the back-end and Firebase Hosting for the front-end.
-              </p>
-
-              <a href="https://github.com/marl-Am/MUSIC-RECOMMENDATION-DEV" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech text-white bg-success">Python</li>
-                <li class="tech text-white bg-info">Flask</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">Tailwind CSS</li>
-                <li class="tech text-white bg-info">JavaScript</li>
-                <li class="tech text-white bg-info">React</li>
-                <li class="tech text-white bg-info">Google Firebase</li>
-                <li class="tech text-white bg-info">Google Cloud Run</li>
-                <!-- <li class="tech text-white bg-info">Railway</li> -->
-                <li class="tech text-white bg-info">Spotify Web API</li>
-              </ul>
-
-            </div>
-          </div>
+      <section id="background" data-reveal>
+        <p class="eyebrow">Background</p>
+        <div class="bg-row">
+          <span class="place">Queens College, NYC — B.S. Computer Science</span>
+          <span class="when">2018 – 2021</span>
         </div>
-
-                <div class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">
-                <a href="https://bugger.pythonanywhere.com/" target="_blank" rel="noreferrer noopener"
-                  class="website-link">Bug Tracker (Click For Website)</a>
-              </h5>
-              <p class="card-text mb-auto">
-                Developed a bug tracker web application using Bootstrap
-                to design the frontend and Flask as the
-                backend that allows users to create an account where they can
-                create/edit/delete projects and their tasks. The data is stored in a
-                MySQL database. Hosted with PythonAnywhere.
-              </p>
-              <a href="https://github.com/marl-Am/bug-reporter" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech text-white bg-success">Python</li>
-                <li class="tech text-white bg-info">Flask</li>
-                <li class="tech text-white bg-info">MySQL</li>
-                <li class="tech text-white bg-info">JavaScript</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">CSS</li>
-                <li class="tech text-white bg-info">PythonAnywhere</li>
-              </ul>
-
-            </div>
-          </div>
+        <div class="bg-row">
+          <span class="place">eBay — Independent E-Commerce Operator</span>
+          <span class="when">2025 – 2026</span>
         </div>
+      </section>
 
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">Blog</h5>
-              <p class="card-text mb-auto">
-                Created a portfolio website with a blog element using Java by utilizing the
-                Spring framework, Spring Security and Thymeleaf, to serve dynamic content.
-                User credentials and blog posts are stored in a MySQL database. Spring Security provides authentication
-                and authorization for users, ensuring s secure application.
-                <br>
-                <!-- <span class="expensive">The blog was initially hosted on Microsoft Azure, but it had to be taken down as the hosting costs were exorbitant.</span> -->
-              </p>
-
-              <a href="https://github.com/marl-Am/blog" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech text-white bg-danger">Java</li>
-                <li class="tech text-white bg-info">Spring</li>
-                <li class="tech text-white bg-info">Thymeleaf</li>
-                <li class="tech text-white bg-info">JavaScript</li>
-                <li class="tech text-white bg-info">MySQL</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">CSS</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">Mycity</h5>
-              <p class="card-text mb-auto">
-                Developed a cloud application rendered by React where a client
-                provides a name of a city and an HTTP GET request is sent to the
-                proper endpoints in the Spring backend. Spring retrieves the
-                data from the external APIs and sends it to the front-end.
-                <br>
-                <!-- <span class="expensive">The app was initially hosted on Google Firebase, but it had to be taken down as the hosting costs were exorbitant.</span> -->
-              </p>
-
-              <a href="https://github.com/marl-Am/my-city" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech text-white bg-danger">Java</li>
-                <li class="tech text-white bg-info">React.js</li>
-                <li class="tech text-white bg-info">Spring</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">CSS</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">
-                <a href="https://password-generator-681b7.web.app/" target="_blank" rel="noreferrer noopener"
-                  class="website-link">
-                  Password Generator (Click For Website)
-                </a>
-              </h5>
-              <p class="card-text mb-auto">
-                Designed my own password generator Flask app hosted on the
-                cloud, with Google Firebase.
-              </p>
-              <a href="https://github.com/marl-Am/password-generator" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech text-white bg-success">Python</li>
-                <li class="tech text-white bg-info">Flask</li>
-                <li class="tech text-white bg-info">JavaScript</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">CSS</li>
-                <li class="tech text-white bg-info">Google Firebase</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">Beam (Webscraper)</h5>
-              <p class="card-text mb-auto">
-                A science news web scraper Flask app that displays information
-                from one article.
-              </p>
-              <a href="https://github.com/marl-Am/beam" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech text-white bg-success">Python</li>
-                <li class="tech text-white bg-info">Flask</li>
-                <li class="tech text-white bg-info">JavaScript</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">CSS</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">Hiit It</h5>
-              <p class="card-text mb-auto">
-                A Hiit timer used for cardio exercises designed for the web.
-              </p>
-              <a href="https://github.com/marl-Am/hiit-it" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech text-white bg-info">JavaScript</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">CSS</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">Forager</h5>
-              <p class="card-text mb-auto">
-                Using the Google Books API, we can search for a book on an
-                Android device.
-              </p>
-              <a href="https://github.com/marl-Am/Forager" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech text-white bg-danger">Java</li>
-                <li class="tech text-white bg-info">Android Studio</li>
-                <li class="tech text-white bg-info">Google Books API</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body d-flex flex-column bg-gray-900-opacity-1">
-              <h5 class="card-title text-warning fw-bold">
-                <a href="https://ai-news-7b4cf.web.app/" target="_blank" rel="noreferrer noopener" class="website-link">
-                  AI News (Click For Website)
-                </a>
-              </h5>
-              <p class="card-text mb-auto">
-                This minimalist and organized website has links to resources related to AI, blockchain, and machine
-                learning,
-                scalable systems, including articles, papers, books, and YouTube channels. The linked content covers
-                optimized
-                server-side algorithms, faster page loads, maintaining data quality. These insights may help to enhance
-                efficiency,
-                accuracy, and provide valuable tools for team improvement.
-              </p>
-              <a href="https://github.com/marl-Am/ai-news" target="_blank" rel="noreferrer noopener"
-                class="btn btn-outline-warning">View Code</a>
-
-              <ul class="tech-ctn list-unstyled d-flex mt-1 text-end">
-                <li class="tech text-white bg-info">JavaScript</li>
-                <li class="tech text-white bg-info">HTML</li>
-                <li class="tech text-white bg-info">CSS</li>
-                <li class="tech text-white bg-info">VS Code</li>
-                <li class="tech text-white bg-info">Firebase</li>
-                <li class="tech text-white bg-info">Github Actions</li>
-                <li class="tech text-white bg-info">Git</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </div>
+      <footer>
+        Reach me at
+        <a href="mailto:mamedee001@gmail.com">mamedee001@gmail.com</a> or on
+        <a href="https://github.com/marl-Am">GitHub</a>.
+      </footer>
     </div>
 
-  </section>
-
-  <!-- Contact Me -->
-  <section class="mt-12 mb-2 contact-container" id="contact-me">
-    <h6 class="section-heading text-center mt-4">Contact Me</h6>
-    <div class="container contact-form">
-
-      <div class="row">
-        <h4 style="text-align:center">I'd love to hear from you!</h4>
-      </div>
-
-      <div class="d-flex justify-content-center">
-        <!-- <a href="https://marlona3.wordpress.com/" target="_blank" rel="noreferrer noopener" class="social">
-              <i class="fa-brands fa-wordpress text-light fa-3x"></i>
-            </a> -->
-        <a href="https://github.com/marl-Am" target="_blank" rel="noreferrer noopener" class="social">
-          <i class="fa-brands fa-github-square text-light fa-3x" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/marlon-a-89715814b/" target="_blank" rel="noreferrer noopener"
-          class="social">
-          <i class="fa-brands fa-linkedin text-light fa-3x" aria-hidden="true"></i>
-        </a>
-        <a href="mailto:mamedee001@gmail.com" target="_blank" rel="noreferrer noopener" class="social">
-          <i class="fa-solid fa-envelope-square text-light fa-3x" aria-hidden="true"></i>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!--  -->
-
-  <!-- Footer -->
-  <div class="container">
-    <!-- <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="white" class="bi bi-feather"
-            viewBox="0 0 16 16">
-            <path
-              d="M15.807.531c-.174-.177-.41-.289-.64-.363a3.765 3.765 0 0 0-.833-.15c-.62-.049-1.394 0-2.252.175C10.365.545 8.264 1.415 6.315 3.1c-1.95 1.686-3.168 3.724-3.758 5.423-.294.847-.44 1.634-.429 2.268.005.316.05.62.154.88.017.04.035.082.056.122A68.362 68.362 0 0 0 .08 15.198a.528.528 0 0 0 .157.72.504.504 0 0 0 .705-.16 67.606 67.606 0 0 1 2.158-3.26c.285.141.616.195.958.182.513-.02 1.098-.188 1.723-.49 1.25-.605 2.744-1.787 4.303-3.642l1.518-1.55a.528.528 0 0 0 0-.739l-.729-.744 1.311.209a.504.504 0 0 0 .443-.15c.222-.23.444-.46.663-.684.663-.68 1.292-1.325 1.763-1.892.314-.378.585-.752.754-1.107.163-.345.278-.773.112-1.188a.524.524 0 0 0-.112-.172ZM3.733 11.62C5.385 9.374 7.24 7.215 9.309 5.394l1.21 1.234-1.171 1.196a.526.526 0 0 0-.027.03c-1.5 1.789-2.891 2.867-3.977 3.393-.544.263-.99.378-1.324.39a1.282 1.282 0 0 1-.287-.018Zm6.769-7.22c1.31-1.028 2.7-1.914 4.172-2.6a6.85 6.85 0 0 1-.4.523c-.442.533-1.028 1.134-1.681 1.804l-.51.524-1.581-.25Zm3.346-3.357C9.594 3.147 6.045 6.8 3.149 10.678c.007-.464.121-1.086.37-1.806.533-1.535 1.65-3.415 3.455-4.976 1.807-1.561 3.746-2.36 5.31-2.68a7.97 7.97 0 0 1 1.564-.173Z" />
-          </svg>
-        </a>
-        <span class="mb-3 mb-md-0 text-white">© 2023</span>
-      </div>
-    </footer> -->
-
-    <footer class="py-3 my-4 mt-2">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="/" class="nav-link px-2 text-white">Home</a></li>
-        <li class="nav-item"><a href="#about-me" class="nav-link px-2 text-white">About</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link px-2 text-white">Projects</a></li>
-        <li class="nav-item"><a href="#contact-me" class="nav-link px-2 text-white">Contact</a></li>
-      </ul>
-      <p class="text-center text-white">© 2023</p>
-    </footer>
-  </div>
-
-  <!-- Back to top button -->
-
-  <button type="button" class="btn btn-info btn-floating btn-lg" id="btn-back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- Test data -->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <script src="/src/index.js"></script>
-</body>
-
+    <script>
+      (function () {
+        var prefersReduced = window.matchMedia(
+          '(prefers-reduced-motion: reduce)'
+        ).matches;
+        var targets = document.querySelectorAll('[data-reveal]');
+        if (prefersReduced || !('IntersectionObserver' in window)) {
+          targets.forEach(function (el) {
+            el.classList.add('is-visible');
+          });
+          return;
+        }
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        targets.forEach(function (el) {
+          observer.observe(el);
+        });
+      })();
+    </script>
+  </body>
 </html>
