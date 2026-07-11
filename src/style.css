@@ -1,14 +1,14 @@
 :root {
-  --bg: #e5e3d9;
+  --bg: #fdfaf1;
   --panel: #ffffff;
-  --ink: #1b1f23;
-  --ink-muted: #5c6570;
-  --line: #d7dbd3;
-  --live: #3f7d5c;
-  --live-bg: #e7efe9;
-  --dev: #a6752c;
-  --dev-bg: #f3e9d9;
-  --link: #33516b;
+  --ink: #050f14;
+  --ink-muted: #184b68;
+  --line: #d8e7ef;
+  --live: #2779a7;
+  --live-bg: #e9f2f6;
+  --dev: #6a5e32;
+  --dev-bg: #fcf7e7;
+  --link: #2779a7;
   --sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
   --mono: 'IBM Plex Mono', 'Consolas', monospace;
 }
