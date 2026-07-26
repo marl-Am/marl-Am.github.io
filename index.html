@@ -348,9 +348,35 @@
             <p>
               An AI-powered search tool utilizing Retrieval-Augmented Generation
               (RAG) to scrape and query official Docker documentation, providing
-              me with instant, context-aware answers for
-              containerization workflows.
+              me with instant, context-aware answers for containerization
+              workflows.
             </p>
+
+            <p>
+              LlamaIndex downloads the Docker docs, cuts them into small chunks,
+              and turns them into searchable data.
+            </p>
+
+            <p>
+              It saves this searchable data into Pinecone's database for fast
+              lookup.
+            </p>
+
+            <p>
+              When you ask a question, LlamaIndex pulls the correct doc chunks
+              from Pinecone and packages them with your prompt.
+            </p>
+
+            <p>
+              Anthropic's Claude reads those doc chunks and writes a clear
+              answer using only that information.
+            </p>
+
+            <p>
+              Chainlit builds the chat interface on your screen so you can send
+              messages and read the responses.
+            </p>
+
             <div class="tech-tags">
               <span>Python</span>
               <span>Chainlit</span>
