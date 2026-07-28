@@ -311,8 +311,8 @@
           Retrieval-augmented generation (RAG)
         </p>
         <p class="tagline">
-          I build and deploy backend systems in Python and Java, with a
-          focus on secure, data-driven applications.
+          I build and deploy backend systems in Python and Java, with a focus on
+          secure, data-driven applications.
         </p>
         <p class="contact-row">
           <a href="mailto:mamedee001@gmail.com">mamedee001@gmail.com</a>
@@ -347,41 +347,43 @@
             <h3>Docker Documentation RAG Assistant</h3>
             <p>
               An AI-powered search tool utilizing Retrieval-Augmented Generation
-              (RAG) to scrape and query official Docker documentation,
-              providing context-grounded answers for containerization
-              workflows.
+              (RAG) to scrape and query official Docker documentation, providing
+              context-grounded answers for containerization workflows.
             </p>
 
             <p>
-              LlamaIndex takes the complete Docker documentation file, slices it into smaller pieces, and turns those pieces into searchable data for the AI.
+              LlamaIndex parses the complete Docker documentation file, chunking
+              it into smaller segments and converting them into searchable
+              vector embeddings.
             </p>
 
             <p>
-              It saves this searchable data into Pinecone's database for fast
-              lookup.
+              These embeddings are indexed and stored in ChromaDB, enabling
+              high-speed, local data retrieval.
             </p>
 
             <p>
-              When you ask a question, LlamaIndex pulls the correct doc chunks
-              from Pinecone and packages them with your prompt.
+              When you submit a query, LlamaIndex retrieves the most relevant
+              documentation segments from ChromaDB to provide precise context to
+              the AI.
             </p>
 
             <p>
-              Anthropic's Claude reads those doc chunks and writes a clear
-              answer using only that information.
+              Ollama processes this retrieved context to generate accurate,
+              context-grounded answers locally, ensuring data privacy.
             </p>
 
             <p>
-              Chainlit builds the chat interface on your screen so you can send
-              messages and read the responses.
+              Chainlit provides an interactive chat interface, enabling a
+              seamless experience for sending queries and receiving responses.
             </p>
 
             <div class="tech-tags">
               <span>Python</span>
               <span>Chainlit</span>
               <span>LlamaIndex</span>
-              <span>Pinecone</span>
-              <span>Anthropic</span>
+              <span>ChromaDB</span>
+              <span>Ollama</span>
             </div>
             <div class="log-entry__links">
               <!-- <a target="_blank" rel="noopener">Live →</a>
@@ -564,15 +566,11 @@
         <div class="manifest">
           <div class="manifest-row">
             <span class="manifest-key">languages</span
-            ><span class="manifest-val"
-              >Python, Java, SQL</span
-            >
+            ><span class="manifest-val">Python, Java, SQL</span>
           </div>
           <div class="manifest-row">
             <span class="manifest-key">frameworks</span
-            ><span class="manifest-val"
-              >Flask, SQLAlchemy, Spring Boot</span
-            >
+            ><span class="manifest-val">Flask, SQLAlchemy, Spring Boot</span>
           </div>
           <div class="manifest-row">
             <span class="manifest-key">databases</span
