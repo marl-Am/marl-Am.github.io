@@ -377,12 +377,21 @@
             </p>
 
             <p>
-              Chainlit provides an interactive chat interface, enabling a
-              seamless experience for sending queries and receiving responses.
+              The retrieval and generation pipeline is exposed through a FastAPI
+              service with a validated request and response schema, so the RAG
+              logic runs independently of any single interface and can be
+              queried directly over HTTP.
+            </p>
+
+            <p>
+              Chainlit consumes that FastAPI endpoint to provide the interactive
+              chat interface, rather than running the RAG pipeline directly,
+              keeping the chat UI and the underlying search service separate.
             </p>
 
             <div class="tech-tags">
               <span>Python</span>
+              <span>FastAPI</span>
               <span>Chainlit</span>
               <span>LlamaIndex</span>
               <span>ChromaDB</span>
