@@ -1,14 +1,18 @@
+/* marl-Am.github.io\src\style.css */
+
 :root {
-  --bg: #fdfaf1;
-  --panel: #ffffff;
-  --ink: #050f14;
-  --ink-muted: #184b68;
-  --line: #d8e7ef;
-  --live: #2779a7;
-  --live-bg: #e9f2f6;
-  --dev: #6a5e32;
-  --dev-bg: #fcf7e7;
-  --link: #2779a7;
+  /* Golden Summer Glow palette */
+  --bg: #faf0ca; /* Cornsilk */
+  --panel: #ffffff; /* neutral white surface, since Cornsilk is already near-white */
+  --ink: #0d3b66; /* Regal Navy */
+  --ink-muted: #3f6488; /* lighter tint of Regal Navy, for secondary text */
+  --line: #ecdfa8; /* deeper tint of Cornsilk, for hairline dividers */
+  --live: #7a5c10; /* deep goldenrod, derived from Royal Gold for legible tag text */
+  --live-bg: rgba(244, 211, 94, 0.3); /* Royal Gold wash */
+  --dev: #a8451e; /* deep terracotta, derived from Sandy Brown for legible tag text */
+  --dev-bg: rgba(238, 150, 75, 0.25); /* Sandy Brown wash */
+  --link: #c23c1f; /* deep tomato, derived from Tomato for legible link text */
+  --accent: #f95738; /* Tomato, used at full strength for small decorative accents */
   --sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
   --mono: 'IBM Plex Mono', 'Consolas', monospace;
 }
@@ -75,7 +79,7 @@ h1 {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--dev);
+  background: var(--accent);
   margin-right: 8px;
   vertical-align: middle;
 }
