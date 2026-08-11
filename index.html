@@ -314,7 +314,7 @@
           Retrieval-augmented generation (RAG)
         </p>
         <p class="tagline">
-          I build and deploy backend systems in Python and Java, with a focus on
+          I build and deploy backend systems in Python, with a focus on
           secure, data-driven applications.
         </p>
         <p class="contact-row">
@@ -329,9 +329,7 @@
         <p class="eyebrow">About</p>
         <p>
           I spent the years teaching myself to ship production software instead
-          of following a single tutorial track. I've built primarily in Python
-          and Java, most recently focusing on secure, data-driven backend
-          design. I also ran an independent e-commerce operation for over a
+          of following a single tutorial track. My development experience is centered around Python, with a primary focus on web applications and, more recently, integrating AI capabilities. I also ran an independent e-commerce operation for over a
           year, handling sourcing, pricing, and fulfillment on my own.
         </p>
       </section>
@@ -344,62 +342,80 @@
           <article class="log-entry log-entry--dev" data-reveal>
             <span class="log-entry__dot" aria-hidden="true"></span>
             <div class="log-entry__meta">
-              <span>July 2026 → Present</span>
-              <span class="status-tag">In development</span>
+              <span>July 2026 → August 2026</span>
+              <span class="status-tag">Shipped</span>
+              <!-- <span class="status-tag">In development</span> -->
             </div>
             <h3>Docker Documentation RAG Assistant</h3>
             <p>
               An AI-powered search tool utilizing Retrieval-Augmented Generation
-              (RAG) to scrape and query official Docker documentation, providing
-              context-grounded answers for containerization workflows.
+              (RAG) to query official Docker documentation, providing
+              context-grounded, source-cited answers for containerization
+              workflows.
             </p>
 
             <p>
-              LlamaIndex parses the complete Docker documentation file, chunking
-              it into smaller segments and converting them into searchable
-              vector embeddings.
+              LlamaIndex ingests Docker's own machine-readable documentation
+              export, chunking it into markdown-aware segments and converting
+              them into searchable vector embeddings. The full corpus: 1,413
+              documentation pages split into 14,813 indexed chunks.
             </p>
 
             <p>
-              These embeddings are indexed and stored in ChromaDB, enabling
-              high-speed, local data retrieval.
+              These embeddings are stored in ChromaDB for high-speed, local
+              retrieval, embedded and queried entirely on CPU with no GPU
+              acceleration, on consumer laptop hardware.
             </p>
 
             <p>
               When you submit a query, LlamaIndex retrieves the most relevant
-              documentation segments from ChromaDB to provide precise context to
-              the AI.
+              documentation chunks from ChromaDB to ground the answer, and every
+              response is returned with the specific Docker doc pages it drew
+              from, deduplicated by source.
             </p>
 
             <p>
-              Ollama processes this retrieved context to generate accurate,
-              context-grounded answers locally, ensuring data privacy.
+              Ollama generates the answer from that retrieved context using a
+              local model, so no query or document content ever leaves the
+              machine.
             </p>
 
             <p>
-              The retrieval and generation pipeline is exposed through a FastAPI
-              service with a validated request and response schema, so the RAG
-              logic runs independently of any single interface and can be
-              queried directly over HTTP.
+              The retrieval and generation pipeline lives behind a shared
+              service layer with a validated request and response schema,
+              rejecting empty or oversized input before it reaches the model, so
+              the same indexed knowledge base can be queried through either
+              interface without duplicating setup or reloading the index twice.
             </p>
 
             <p>
-              Chainlit consumes that FastAPI endpoint to provide the interactive
-              chat interface, rather than running the RAG pipeline directly,
-              keeping the chat UI and the underlying search service separate.
+              Chainlit and a plain FastAPI JSON API are mounted in a single
+              process and both consume that shared pipeline directly, keeping
+              the interactive chat experience and the underlying search logic
+              decoupled from each other while avoiding the overhead of a network
+              hop between them. Covered by a 71-test suite spanning ingestion,
+              retrieval, and both interfaces.
             </p>
 
             <div class="tech-tags">
               <span>Python</span>
-              <span>FastAPI</span>
-              <span>Chainlit</span>
+              <span>Pytest</span>
               <span>LlamaIndex</span>
               <span>ChromaDB</span>
               <span>Ollama</span>
+              <span>LLM: llama3.2:3b</span>
+              <span>Embed model: nomic-embed-text</span>
+              <span>FastAPI</span>
+              <span>Chainlit</span>
             </div>
             <div class="log-entry__links">
-              <!-- <a target="_blank" rel="noopener">Live →</a>
-              <a target="_blank" rel="noopener">GitHub →</a> -->
+              <!-- <a target="_blank" rel="noopener">Live →</a> -->
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/marl-Am/docker-rag-assistant"
+                >GitHub →</a
+              >
             </div>
           </article>
 
@@ -580,7 +596,7 @@
         <div class="manifest">
           <div class="manifest-row">
             <span class="manifest-key">languages</span
-            ><span class="manifest-val">Python, Java, SQL</span>
+            ><span class="manifest-val">Python, Java</span>
           </div>
           <div class="manifest-row">
             <span class="manifest-key">frameworks</span
@@ -589,6 +605,12 @@
           <div class="manifest-row">
             <span class="manifest-key">databases</span
             ><span class="manifest-val">PostgreSQL, SQLite</span>
+          </div>
+          <div class="manifest-row">
+            <span class="manifest-key">testing</span
+            ><span class="manifest-val"
+              >Pytest</span
+            >
           </div>
           <div class="manifest-row">
             <span class="manifest-key">security</span
