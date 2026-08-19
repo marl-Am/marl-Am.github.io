@@ -351,14 +351,15 @@
             </div>
             <h3>ProviderPulse</h3>
             <p>
-              A data pipeline and query API for Medicare provider payment records, processing over 10 million rows into aggregated, queryable results. Built with FastAPI and PostgreSQL on the backend, containerized with Docker, and deployed on Kubernetes specifically to practice production-style orchestration, including Jobs and Secrets, instead of a single-instance deployment.
+              A data pipeline and query API for Medicare provider payment records, processing 9.78 million rows into aggregated, queryable results. Built with FastAPI and PostgreSQL, using DuckDB for the extraction and aggregation stages, and containerized with Docker Compose.
             </p>
             <div class="tech-tags">
               <span>Python</span>
               <span>FastAPI</span>
               <span>PostgreSQL</span>
               <span>Docker</span>
-              <span>Kubernetes</span>
+              <span>DuckDB</span>
+              <span>Pytest</span>
             </div>
             <!-- <div class="log-entry__links">
               <a
