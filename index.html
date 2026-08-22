@@ -314,8 +314,8 @@
           Retrieval-augmented generation (RAG)
         </p>
         <p class="tagline">
-          I build and deploy backend systems in Python, with a focus on
-          secure, data-driven applications.
+          I build and deploy backend systems in Python, with a focus on secure,
+          data-driven applications.
         </p>
         <p class="contact-row">
           <a href="mailto:mamedee001@gmail.com">mamedee001@gmail.com</a>
@@ -328,9 +328,13 @@
       <section id="about" data-reveal>
         <p class="eyebrow">About</p>
         <p>
-          I spent the years teaching myself to ship production software instead
-          of following a single tutorial track. My development experience is centered around Python, with a primary focus on web applications and, more recently, integrating AI capabilities. I also ran an independent e-commerce operation for over a
-          year, handling sourcing, pricing, and fulfillment on my own.
+          A data pipeline and query API for Medicare provider payment records,
+          processing 19.4 million rows across two years into aggregated,
+          queryable results. DuckDB handles extraction and aggregation, FastAPI
+          and PostgreSQL serve the results, all containerized locally with
+          Docker Compose. Deployed with the API on Vercel and the database on
+          Neon. Only the aggregated summaries are deployed; the full 19.4M-row
+          dataset stays local, since nothing the API serves needs it.
         </p>
       </section>
 
@@ -339,19 +343,26 @@
       <section id="log">
         <p class="eyebrow">Build Log</p>
         <div class="log">
-          
-          
           <article class="log-entry log-entry--dev" data-reveal>
             <span class="log-entry__dot" aria-hidden="true"></span>
             <div class="log-entry__meta">
-              <span>August 2026 -> Present</span>
-              <span class="status-tag">Shipped</span>
-              <!-- <span class="status-tag">Live</span> -->
+              <span>August 2026</span>
+              <!-- <span class="status-tag">Shipped</span> -->
+              <span class="status-tag">Live</span>
               <!-- <span class="status-tag">In development</span> -->
             </div>
             <h3>ProviderPulse</h3>
-            <p>
-              A data pipeline and query API for Medicare provider payment records, processing 19.4 million rows across two years into aggregated, queryable results. Built with FastAPI and PostgreSQL, using DuckDB for the extraction and aggregation stages, and containerized with Docker Compose.
+            <!-- <img
+              src="src/gifs/provider-pulse-demo.gif"
+              alt="Demo of the ProviderPulse api answering a query"
+              style="max-width: 100%; width: 500px" />
+            <p> -->
+              A data pipeline and query API for Medicare provider payment
+              records, processing 19.4 million rows across two years into
+              aggregated, queryable results. DuckDB handles extraction and
+              aggregation, FastAPI and PostgreSQL serve the results, all
+              containerized locally with Docker Compose. Deployed with the API
+              on Vercel and the database on Neon.
             </p>
             <div class="tech-tags">
               <span>Python</span>
@@ -360,17 +371,31 @@
               <span>Docker</span>
               <span>DuckDB</span>
               <span>Pytest</span>
+              <span>Vercel</span>
+              <span>Neon</span>
             </div>
-            <!-- <div class="log-entry__links">
+            <div class="log-entry__links">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://medicare-claims-pipeline-six.vercel.app"
+                >Live →</a
+              >
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://medicare-claims-pipeline-six.vercel.app/docs#/"
+                >Docs →</a
+              >
               <a
                 target="_blank"
                 rel="noopener"
                 href="https://github.com/marl-Am/medicare-claims-pipeline"
                 >GitHub →</a
               >
-            </div> -->
+            </div>
           </article>
-          
+
           <article class="log-entry" data-reveal>
             <span class="log-entry__dot" aria-hidden="true"></span>
             <div class="log-entry__meta">
@@ -379,7 +404,10 @@
               <!-- <span class="status-tag">In development</span> -->
             </div>
             <h3>Docker Documentation RAG Assistant</h3>
-            <img src="src/gifs/rag-demo.gif" alt="Demo of the Docker Documentation RAG Assistant answering a query" style="max-width: 100%; width: 500px;" />
+            <img
+              src="src/gifs/rag-demo.gif"
+              alt="Demo of the Docker Documentation RAG Assistant answering a query"
+              style="max-width: 100%; width: 500px" />
             <p>
               An AI-powered search tool utilizing Retrieval-Augmented Generation
               (RAG) to query official Docker documentation, providing
@@ -641,9 +669,7 @@
           </div>
           <div class="manifest-row">
             <span class="manifest-key">testing</span
-            ><span class="manifest-val"
-              >Pytest</span
-            >
+            ><span class="manifest-val">Pytest</span>
           </div>
           <div class="manifest-row">
             <span class="manifest-key">security</span
